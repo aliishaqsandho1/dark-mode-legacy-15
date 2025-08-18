@@ -3,25 +3,40 @@ import { motion, AnimatePresence } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import ProjectCard from "@/components/ProjectCard";
 
+// Import project images
+import dekosmetiskeImage from "@/assets/dekosmetiske-image.jpg";
+import msfPropertiesImage from "@/assets/msf-properties-image.jpg";
+import galileoProtocolImage from "@/assets/galileo-protocol-image.jpg";
+import b9EnergyImage from "@/assets/b9-energy-image.jpg";
+import sodomaLawImage from "@/assets/sodoma-law-image.jpg";
+import qnqBuildersImage from "@/assets/qnq-builders-image.jpg";
+import mattisAutoImage from "@/assets/mattis-auto-image.jpg";
+import fancyMoissaniteImage from "@/assets/fancy-moissanite-image.jpg";
+import ncAttorneyImage from "@/assets/nc-attorney-image.jpg";
+import rpoAiImage from "@/assets/rpo-ai-image.jpg";
+
 // Real project data from Ali Ishaq's resume
 const projects = [
   {
+    id: "dekosmetiskelaeger",
     title: "Dekosmetiskelæger.dk",
     description: "Professional cosmetic clinic website with appointment booking system, treatment showcase, and multilingual support for Danish medical practice. Features advanced SEO optimization and performance tuning.",
     technologies: ["WordPress", "PHP", "Custom Themes", "Booking System", "Multilingual", "SEO"],
-    imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=2070",
+    imageUrl: dekosmetiskeImage,
     category: "WordPress",
     liveUrl: "https://www.dekosmetiskelaeger.dk/",
   },
   {
+    id: "msf-properties",
     title: "MSF Properties",
     description: "Comprehensive real estate platform featuring property listings, advanced search functionality, virtual tours, and integrated property management tools specifically designed for the UAE market.",
     technologies: ["WordPress", "Real Estate Plugin", "Custom Fields", "Property Search", "Maps Integration", "Virtual Tours"],
-    imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973",
+    imageUrl: msfPropertiesImage,
     category: "WordPress",
     liveUrl: "https://msfproperties.ae/",
   },
   {
+    id: "empyrian-media",
     title: "Empyrian Media",
     description: "Digital marketing agency website with portfolio showcase, service pages, client testimonials, and case studies. Modern design with advanced animations and performance optimization.",
     technologies: ["WordPress", "Elementor Pro", "Custom Animations", "SEO Optimization", "Performance Tuning", "Analytics"],
@@ -30,62 +45,70 @@ const projects = [
     liveUrl: "https://empyrianmedia.com/",
   },
   {
+    id: "galileo-protocol",
     title: "GALILEO Protocol",
     description: "Blockchain-based protocol website with sophisticated design, technical documentation, and integration with blockchain technologies. Features modern UI/UX and responsive design.",
     technologies: ["WordPress", "Blockchain Integration", "Custom Design", "Technical Documentation", "Responsive Design"],
-    imageUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2070",
+    imageUrl: galileoProtocolImage,
     category: "WordPress",
     liveUrl: "https://galileoprotocol.io/",
   },
   {
+    id: "b9-energy",
     title: "B9 Energy",
     description: "Energy sector website showcasing renewable energy solutions, company services, and project portfolios. Features clean design with focus on sustainability and environmental impact.",
     technologies: ["WordPress", "Custom Theme", "Portfolio Management", "Service Showcase", "Environmental Design"],
-    imageUrl: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=2070",
+    imageUrl: b9EnergyImage,
     category: "WordPress",
     liveUrl: "https://b9energy.co.uk/",
   },
   {
+    id: "sodoma-law",
     title: "Sodoma Law",
     description: "Professional law firm website with practice area showcase, attorney profiles, case studies, and client portal. Features sophisticated design with emphasis on trust and professionalism.",
     technologies: ["WordPress", "Legal Theme", "Attorney Profiles", "Case Studies", "Client Portal", "Professional Design"],
-    imageUrl: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070",
+    imageUrl: sodomaLawImage,
     category: "WordPress",
     liveUrl: "https://www.sodomalaw.com/",
   },
   {
+    id: "qnq-builders",
     title: "QNQ Builders",
     description: "Construction company website featuring project galleries, service offerings, team profiles, and client testimonials. Emphasis on showcasing construction expertise and completed projects.",
     technologies: ["WordPress", "Construction Theme", "Project Gallery", "Team Profiles", "Testimonials", "Service Pages"],
-    imageUrl: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070",
+    imageUrl: qnqBuildersImage,
     category: "WordPress",
     liveUrl: "https://qnqbuilders.co.uk/",
   },
   {
+    id: "mattis-auto-detailing",
     title: "Mattis Auto Detailing",
     description: "Automotive detailing service website with service packages, before/after galleries, booking system, and customer reviews. Features modern design optimized for mobile users.",
     technologies: ["WordPress", "Automotive Theme", "Booking System", "Gallery Management", "Mobile Optimization", "Review System"],
-    imageUrl: "https://images.unsplash.com/photo-1632294635264-db2814d3cd60?q=80&w=2070",
+    imageUrl: mattisAutoImage,
     category: "WordPress",
     liveUrl: "https://mattisautodetailing-com.us.stackstaging.com/",
   },
   {
+    id: "fancy-moissanite",
     title: "Fancy Moissanite",
     description: "E-commerce jewelry website featuring moissanite products with WooCommerce integration, payment gateways, product customization, and advanced search functionality.",
     technologies: ["WordPress", "WooCommerce", "E-commerce", "Payment Integration", "Product Customization", "Search Filters"],
-    imageUrl: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=2070",
+    imageUrl: fancyMoissaniteImage,
     category: "WordPress",
     liveUrl: "https://fancymoissanite.com/",
   },
   {
+    id: "north-carolina-attorney",
     title: "North Carolina Attorney",
     description: "Legal services website for Hartsell & Williams featuring attorney profiles, practice areas, legal resources, and client consultation booking. Professional design with local SEO optimization.",
     technologies: ["WordPress", "Legal Framework", "Attorney Directory", "Consultation Booking", "Legal Resources", "Local SEO"],
-    imageUrl: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070",
+    imageUrl: ncAttorneyImage,
     category: "WordPress",
     liveUrl: "https://yourncattorney.com/",
   },
   {
+    id: "agency-angle",
     title: "Agency Angle / Clear Lines",
     description: "Creative agency website showcasing design services, portfolio projects, and client success stories. Features modern animations and interactive elements for enhanced user experience.",
     technologies: ["WordPress", "Creative Design", "Portfolio Showcase", "Animations", "Interactive Elements", "Client Stories"],
@@ -94,10 +117,11 @@ const projects = [
     liveUrl: "https://empyrianmedia.com/",
   },
   {
+    id: "rpo-ai",
     title: "RPO.ai",
     description: "AI-powered recruitment platform featuring advanced candidate matching, automated workflows, and data analytics. Modern tech design with emphasis on AI capabilities and user experience.",
     technologies: ["WordPress", "AI Integration", "Data Analytics", "Automated Workflows", "Modern UI", "Tech Design"],
-    imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
+    imageUrl: rpoAiImage,
     category: "WordPress",
     liveUrl: "https://rpo.ai/",
   },

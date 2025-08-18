@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 interface ContactFormData {
   name: string;
@@ -37,12 +38,19 @@ const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) {
+        throw error;
+      }
+
       toast({
         title: "Message Sent",
         description: "Thanks for reaching out! I'll get back to you soon.",
@@ -55,9 +63,17 @@ const Contact = () => {
         subject: "",
         message: "",
       });
-      
+    } catch (error: any) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or contact me directly.",
+        variant: "destructive",
+        duration: 5000,
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   const contactInfo = [

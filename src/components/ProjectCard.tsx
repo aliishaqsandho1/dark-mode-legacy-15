@@ -1,9 +1,11 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github, ChevronDown, ChevronUp, Image } from "lucide-react";
+import { ExternalLink, Github, ChevronDown, ChevronUp, Image, Eye } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface ProjectCardProps {
+  id?: string;
   title: string;
   description: string;
   technologies: string[];
@@ -14,6 +16,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({
+  id,
   title,
   description,
   technologies,
@@ -52,17 +55,16 @@ const ProjectCard = ({
         )}
         <div className="absolute inset-0 bg-dark-100/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <div className="flex space-x-4">
-            {githubUrl && (
-              <motion.a 
-                href={githubUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-dark-300/80 p-2 rounded-full text-white hover:text-neon-blue transition-colors"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Github size={20} />
-              </motion.a>
+            {id && (
+              <Link to={`/projects/${id}`}>
+                <motion.div
+                  className="bg-dark-300/80 p-2 rounded-full text-white hover:text-neon-blue transition-colors"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Eye size={20} />
+                </motion.div>
+              </Link>
             )}
             {liveUrl && (
               <motion.a 
