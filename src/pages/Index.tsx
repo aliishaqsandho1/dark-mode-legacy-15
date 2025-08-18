@@ -9,49 +9,49 @@ import SocialLinks from "@/components/SocialLinks";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured e-commerce solution built with React, Node.js, and MongoDB. Includes product management, user authentication, cart functionality, and payment processing with Stripe.",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
-    imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070",
-    category: "MERN Stack",
-    githubUrl: "https://github.com/AliIshaqPro",
-  },
-  {
-    title: "Booking Management System",
-    description: "A comprehensive booking management system for service-based businesses, featuring appointment scheduling, staff management, and customer notifications.",
-    technologies: ["Ruby on Rails", "PostgreSQL", "Redis", "Sidekiq", "Hotwire"],
-    imageUrl: "https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?q=80&w=1974",
-    category: "Ruby on Rails",
-    githubUrl: "https://github.com/AliIshaqPro",
-  },
-  {
-    title: "Corporate Portfolio",
-    description: "A modern WordPress site for a corporate client with custom theme development, advanced animations, and integration with multiple third-party services.",
-    technologies: ["WordPress", "PHP", "JavaScript", "SCSS", "REST API"],
-    imageUrl: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000",
+    title: "Dekosmetiskelæger.dk",
+    description: "Professional cosmetic clinic website with appointment booking system, treatment showcase, and multilingual support for Danish medical practice.",
+    technologies: ["WordPress", "PHP", "Custom Themes", "Booking System", "Multilingual"],
+    imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=2070",
     category: "WordPress",
-    githubUrl: "https://github.com/AliIshaqPro",
+    liveUrl: "https://www.dekosmetiskelaeger.dk/",
+  },
+  {
+    title: "MSF Properties",
+    description: "Real estate platform featuring property listings, advanced search functionality, and integrated property management tools for UAE market.",
+    technologies: ["WordPress", "Real Estate Plugin", "Custom Fields", "Property Search", "Maps Integration"],
+    imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973",
+    category: "WordPress",
+    liveUrl: "https://msfproperties.ae/",
+  },
+  {
+    title: "Empyrian Media",
+    description: "Digital marketing agency website with portfolio showcase, service pages, and client testimonials. Modern design with performance optimization.",
+    technologies: ["WordPress", "Elementor Pro", "Custom Animations", "SEO Optimization", "Performance Tuning"],
+    imageUrl: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2074",
+    category: "WordPress",
+    liveUrl: "https://empyrianmedia.com/",
   },
 ];
 
 const experienceData = [
   {
-    period: "2022 - Present",
-    title: "Senior WordPress Developer",
-    company: "Freelance",
-    description: "Developing custom WordPress themes and plugins for clients across various industries. Implementing complex features and integrations with third-party services.",
+    period: "April 2025 - Present",
+    title: "Lead WordPress Developer",
+    company: "Cortechsols",
+    description: "Leading a team of 5 developers, engineered 10+ custom WordPress themes, and integrated third-party APIs for seamless WooCommerce transactions.",
   },
   {
-    period: "2022 - Present",
-    title: "Ruby on Rails Developer",
-    company: "Freelance",
-    description: "Building robust web applications with Ruby on Rails. Designing database schemas, implementing APIs, and deploying applications to cloud platforms.",
+    period: "February 2024 - April 2025",
+    title: "WordPress Developer",
+    company: "Kodoverse (Remote)",
+    description: "Optimized WooCommerce stores using Dokan Pro and Blockchain, built custom WordPress themes & plugins, increasing user engagement by 20%.",
   },
   {
-    period: "2022 - Present",
-    title: "MERN Stack Developer",
-    company: "Freelance",
-    description: "Developing full-stack applications using MongoDB, Express.js, React, and Node.js. Creating responsive UIs and RESTful APIs for various business needs.",
+    period: "September 2020 - April 2024",
+    title: "WordPress Developer",
+    company: "Iplex",
+    description: "Developed 5+ responsive WordPress websites with custom CMS solutions and diagnosed/resolved 50+ WordPress bugs improving site performance.",
   },
 ];
 
@@ -80,17 +80,17 @@ const Index = () => {
                 transition={{ duration: 0.6 }}
               >
                 <div className="inline-block px-3 py-1 rounded-full bg-neon-blue/10 text-neon-blue text-sm font-medium mb-6">
-                  Senior Developer
+                  WordPress Developer
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                   Hi, I'm <span className="text-gradient">Ali Ishaq</span>
                   <br /> 
-                  I Build Digital <br />
-                  Experiences
+                  WordPress Developer <br />
+                  & Web Specialist
                 </h1>
                 <p className="text-gray-400 text-lg mb-8 max-w-lg">
-                  Senior Developer with 1.5+ years of extensive experience in WordPress, 
-                  Ruby on Rails, and MERN stack development.
+                  Results-driven WordPress Developer with over 2.5 years of experience. 
+                  Specialized in custom themes, plugins, and WooCommerce solutions.
                 </p>
                 
                 <div className="flex flex-wrap gap-4">
@@ -138,8 +138,8 @@ const Index = () => {
                     <Calendar size={20} />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-xs">Experience</p>
-                    <p className="text-white font-medium">1.5+ Years</p>
+                            <p className="text-gray-400 text-xs">Experience</p>
+                            <p className="text-white font-medium">2.5+ Years</p>
                   </div>
                 </div>
               </div>
@@ -187,9 +187,9 @@ const Index = () => {
               <div className="bg-neon-blue/20 w-12 h-12 rounded-full flex items-center justify-center text-neon-blue mb-4">
                 <Code size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-3">WordPress Developer</h3>
+              <h3 className="text-xl font-bold mb-3">WordPress Specialist</h3>
               <p className="text-gray-400 mb-4">
-                Expert in custom theme and plugin development, with a focus on performance optimization and seamless third-party integrations.
+                Expert in custom theme and plugin development, WooCommerce integration, and maintaining Nginx servers under heavy traffic.
               </p>
               <ul className="text-gray-400 space-y-2">
                 <li className="flex items-center">
@@ -215,26 +215,26 @@ const Index = () => {
               <div className="bg-neon-purple/20 w-12 h-12 rounded-full flex items-center justify-center text-neon-purple mb-4">
                 <Layers size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-3">Ruby on Rails Developer</h3>
+              <h3 className="text-xl font-bold mb-3">Web Developer</h3>
               <p className="text-gray-400 mb-4">
-                Proficient in building robust web applications with Ruby on Rails, focusing on clean code, test-driven development, and scalable architectures.
+                Proficient in HTML5, CSS3, JavaScript, React.js, and modern web technologies. Creating responsive and user-friendly web experiences.
               </p>
               <ul className="text-gray-400 space-y-2">
                 <li className="flex items-center">
                   <span className="w-1.5 h-1.5 bg-neon-purple rounded-full mr-2"></span>
-                  Full-stack Rails Development
+                  HTML5 & CSS3
                 </li>
                 <li className="flex items-center">
                   <span className="w-1.5 h-1.5 bg-neon-purple rounded-full mr-2"></span>
-                  API Development
+                  JavaScript & React.js
                 </li>
                 <li className="flex items-center">
                   <span className="w-1.5 h-1.5 bg-neon-purple rounded-full mr-2"></span>
-                  Database Design
+                  Bootstrap & SASS
                 </li>
                 <li className="flex items-center">
                   <span className="w-1.5 h-1.5 bg-neon-purple rounded-full mr-2"></span>
-                  Testing & Deployment
+                  REST API Development
                 </li>
               </ul>
             </AnimatedSection>
@@ -243,26 +243,26 @@ const Index = () => {
               <div className="bg-neon-pink/20 w-12 h-12 rounded-full flex items-center justify-center text-neon-pink mb-4">
                 <BriefcaseBusiness size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-3">MERN Stack Developer</h3>
+              <h3 className="text-xl font-bold mb-3">WooCommerce Specialist</h3>
               <p className="text-gray-400 mb-4">
-                Experienced in building modern web applications using MongoDB, Express.js, React, and Node.js with a focus on responsive UIs and robust backend services.
+                Expert in WooCommerce development, custom integrations, payment gateways, and multivendor marketplace solutions with focus on performance optimization.
               </p>
               <ul className="text-gray-400 space-y-2">
                 <li className="flex items-center">
                   <span className="w-1.5 h-1.5 bg-neon-pink rounded-full mr-2"></span>
-                  React Frontend Development
+                  WooCommerce Development
                 </li>
                 <li className="flex items-center">
                   <span className="w-1.5 h-1.5 bg-neon-pink rounded-full mr-2"></span>
-                  Node.js Backend Services
+                  Payment Gateway Integration
                 </li>
                 <li className="flex items-center">
                   <span className="w-1.5 h-1.5 bg-neon-pink rounded-full mr-2"></span>
-                  MongoDB Database Design
+                  Multivendor Marketplace
                 </li>
                 <li className="flex items-center">
                   <span className="w-1.5 h-1.5 bg-neon-pink rounded-full mr-2"></span>
-                  RESTful & GraphQL APIs
+                  E-commerce Optimization
                 </li>
               </ul>
             </AnimatedSection>

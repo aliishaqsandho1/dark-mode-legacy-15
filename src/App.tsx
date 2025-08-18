@@ -10,7 +10,6 @@ import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
-import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
@@ -27,7 +26,6 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<Index />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />
-        <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />

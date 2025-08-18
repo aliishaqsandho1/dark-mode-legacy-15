@@ -76,7 +76,7 @@ const Contact = () => {
     {
       icon: <MapPin size={24} />,
       title: "Location",
-      value: "Available Worldwide",
+      value: "Islamabad, Pakistan",
       link: null,
     },
     {
@@ -101,16 +101,16 @@ const Contact = () => {
       color: "hover:text-blue-400",
     },
     {
-      icon: <Instagram size={20} />,
-      name: "Instagram",
-      url: "https://sample-instagram.com/",
-      color: "hover:text-pink-500",
+      icon: <Globe size={20} />,
+      name: "Upwork",
+      url: "https://www.upwork.com/freelancers/~01ea89981961c95a70?mp_source=share",
+      color: "hover:text-green-500",
     },
     {
-      icon: <Facebook size={20} />,
-      name: "Facebook",
-      url: "https://sample-facebook.com/",
-      color: "hover:text-blue-500",
+      icon: <Globe size={20} />,
+      name: "Fiverr",
+      url: "https://www.fiverr.com/s/0b80y6k",
+      color: "hover:text-green-400",
     },
   ];
 

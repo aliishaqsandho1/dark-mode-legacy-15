@@ -34,49 +34,38 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SkillCard from "@/components/SkillCard";
 
 const skillsData = [
-  // WordPress
+  // WordPress Development
   { name: "WordPress", icon: <Globe size={20} />, level: 95, category: "WordPress" },
-  { name: "PHP", icon: <FileCode size={20} />, level: 90, category: "WordPress" },
-  { name: "ACF Pro", icon: <Layers size={20} />, level: 90, category: "WordPress" },
-  { name: "WooCommerce", icon: <ShoppingCart size={20} />, level: 85, category: "WordPress" },
-  { name: "WordPress REST API", icon: <Server size={20} />, level: 85, category: "WordPress" },
-  { name: "WordPress Theme Dev", icon: <PenTool size={20} />, level: 95, category: "WordPress" },
-  { name: "WordPress Plugin Dev", icon: <Command size={20} />, level: 90, category: "WordPress" },
-  { name: "Elementor", icon: <Layers size={20} />, level: 90, category: "WordPress" },
-  { name: "Gutenberg", icon: <Layers size={20} />, level: 85, category: "WordPress" },
+  { name: "Theme Development", icon: <PenTool size={20} />, level: 95, category: "WordPress" },
+  { name: "Plugin Development", icon: <Command size={20} />, level: 90, category: "WordPress" },
+  { name: "WooCommerce", icon: <ShoppingCart size={20} />, level: 90, category: "WordPress" },
+  { name: "Elementor Pro", icon: <Layers size={20} />, level: 90, category: "WordPress" },
+  { name: "Divi Builder", icon: <Layers size={20} />, level: 85, category: "WordPress" },
+  { name: "WP Bakery", icon: <Layers size={20} />, level: 85, category: "WordPress" },
+  { name: "ACF Pro", icon: <Table size={20} />, level: 95, category: "WordPress" },
   { name: "Custom Post Types", icon: <Table size={20} />, level: 95, category: "WordPress" },
-  { name: "WordPress Security", icon: <Shield size={20} />, level: 80, category: "WordPress" },
-  { name: "WordPress SEO", icon: <Search size={20} />, level: 85, category: "WordPress" },
+  { name: "WordPress REST API", icon: <Server size={20} />, level: 85, category: "WordPress" },
+  { name: "WordPress Security", icon: <Shield size={20} />, level: 85, category: "WordPress" },
+  { name: "Technical SEO", icon: <Search size={20} />, level: 90, category: "WordPress" },
   
-  // Ruby on Rails
-  { name: "Ruby", icon: <Code size={20} />, level: 85, category: "Ruby on Rails" },
-  { name: "Ruby on Rails", icon: <Workflow size={20} />, level: 85, category: "Ruby on Rails" },
-  { name: "PostgreSQL", icon: <Database size={20} />, level: 80, category: "Ruby on Rails" },
-  { name: "Sidekiq", icon: <Cpu size={20} />, level: 75, category: "Ruby on Rails" },
-  { name: "RSpec", icon: <Command size={20} />, level: 80, category: "Ruby on Rails" },
-  { name: "ActiveRecord", icon: <Database size={20} />, level: 85, category: "Ruby on Rails" },
-  { name: "Hotwire", icon: <Zap size={20} />, level: 80, category: "Ruby on Rails" },
-  { name: "Redis", icon: <Database size={20} />, level: 75, category: "Ruby on Rails" },
-  { name: "Turbo", icon: <RefreshCw size={20} />, level: 80, category: "Ruby on Rails" },
-  { name: "Stimulus", icon: <Zap size={20} />, level: 80, category: "Ruby on Rails" },
-  { name: "Action Cable", icon: <Share2 size={20} />, level: 75, category: "Ruby on Rails" },
-  { name: "Active Storage", icon: <HardDrive size={20} />, level: 85, category: "Ruby on Rails" },
+  // Frontend Development
+  { name: "HTML5", icon: <Code size={20} />, level: 95, category: "Frontend" },
+  { name: "CSS3", icon: <PenTool size={20} />, level: 95, category: "Frontend" },
+  { name: "JavaScript", icon: <Code size={20} />, level: 90, category: "Frontend" },
+  { name: "React.js", icon: <Code size={20} />, level: 85, category: "Frontend" },
+  { name: "Bootstrap", icon: <PenTool size={20} />, level: 90, category: "Frontend" },
+  { name: "SASS/SCSS", icon: <PenTool size={20} />, level: 90, category: "Frontend" },
+  { name: "jQuery", icon: <Code size={20} />, level: 90, category: "Frontend" },
+  { name: "Responsive Design", icon: <Monitor size={20} />, level: 95, category: "Frontend" },
   
-  // MERN Stack
-  { name: "JavaScript", icon: <Code size={20} />, level: 90, category: "MERN Stack" },
-  { name: "React", icon: <Code size={20} />, level: 90, category: "MERN Stack" },
-  { name: "Node.js", icon: <Server size={20} />, level: 85, category: "MERN Stack" },
-  { name: "Express.js", icon: <Server size={20} />, level: 85, category: "MERN Stack" },
-  { name: "MongoDB", icon: <Database size={20} />, level: 80, category: "MERN Stack" },
-  { name: "Redux", icon: <Workflow size={20} />, level: 85, category: "MERN Stack" },
-  { name: "GraphQL", icon: <Compass size={20} />, level: 75, category: "MERN Stack" },
-  { name: "TypeScript", icon: <Code size={20} />, level: 85, category: "MERN Stack" },
-  { name: "Next.js", icon: <Zap size={20} />, level: 80, category: "MERN Stack" },
-  { name: "React Query", icon: <RefreshCw size={20} />, level: 80, category: "MERN Stack" },
-  { name: "Socket.io", icon: <Share2 size={20} />, level: 75, category: "MERN Stack" },
-  { name: "JWT Authentication", icon: <Shield size={20} />, level: 85, category: "MERN Stack" },
-  { name: "React Router", icon: <Compass size={20} />, level: 90, category: "MERN Stack" },
-  { name: "Mongoose", icon: <Database size={20} />, level: 85, category: "MERN Stack" },
+  // Backend Development
+  { name: "PHP", icon: <FileCode size={20} />, level: 90, category: "Backend" },
+  { name: "MySQL", icon: <Database size={20} />, level: 85, category: "Backend" },
+  { name: "SQL", icon: <Database size={20} />, level: 85, category: "Backend" },
+  { name: "REST API", icon: <Server size={20} />, level: 90, category: "Backend" },
+  { name: "Nginx", icon: <Server size={20} />, level: 80, category: "Backend" },
+  { name: "WP Engine", icon: <Cloud size={20} />, level: 85, category: "Backend" },
+  { name: "AWS", icon: <Cloud size={20} />, level: 75, category: "Backend" },
   
   // Tools & Technologies
   { name: "Git", icon: <GitBranch size={20} />, level: 90, category: "Tools" },
@@ -98,7 +87,7 @@ const skillsData = [
 
 const Skills = () => {
   const [filter, setFilter] = useState("All");
-  const categories = ["All", "WordPress", "Ruby on Rails", "MERN Stack", "Tools"];
+  const categories = ["All", "WordPress", "Frontend", "Backend", "Tools"];
   
   const filteredSkills = filter === "All" 
     ? skillsData 
@@ -112,7 +101,7 @@ const Skills = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">My <span className="text-gradient">Skills</span></h1>
             <p className="text-gray-400">
-              A comprehensive overview of my technical skills and expertise across different technologies and platforms.
+              A comprehensive overview of my technical skills in WordPress development, web technologies, and modern development tools.
             </p>
           </div>
         </AnimatedSection>

@@ -1,136 +1,111 @@
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import ProjectCard from "@/components/ProjectCard";
 
-// Project data
+// Real project data from Ali Ishaq's resume
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured e-commerce solution built with React, Node.js, and MongoDB. Includes product management, user authentication, cart functionality, and payment processing with Stripe.",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
-    imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070",
-    category: "MERN Stack",
-    githubUrl: "https://github.com/AliIshaqPro",
-  },
-  {
-    title: "Booking Management System",
-    description: "A comprehensive booking management system for service-based businesses, featuring appointment scheduling, staff management, and customer notifications.",
-    technologies: ["Ruby on Rails", "PostgreSQL", "Redis", "Sidekiq", "Hotwire"],
-    imageUrl: "https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?q=80&w=1974",
-    category: "Ruby on Rails",
-    githubUrl: "https://github.com/AliIshaqPro",
-  },
-  {
-    title: "Corporate Portfolio",
-    description: "A modern WordPress site for a corporate client with custom theme development, advanced animations, and integration with multiple third-party services.",
-    technologies: ["WordPress", "PHP", "JavaScript", "SCSS", "REST API"],
-    imageUrl: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000",
+    title: "Dekosmetiskelæger.dk",
+    description: "Professional cosmetic clinic website with appointment booking system, treatment showcase, and multilingual support for Danish medical practice. Features advanced SEO optimization and performance tuning.",
+    technologies: ["WordPress", "PHP", "Custom Themes", "Booking System", "Multilingual", "SEO"],
+    imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=2070",
     category: "WordPress",
-    githubUrl: "https://github.com/AliIshaqPro",
+    liveUrl: "https://www.dekosmetiskelaeger.dk/",
   },
   {
-    title: "Real Estate Platform",
-    description: "A comprehensive real estate platform allowing property listings, advanced search, user accounts, and agent profiles. Features interactive maps and virtual tours.",
-    technologies: ["WordPress", "PHP", "JavaScript", "Google Maps API", "Custom Fields"],
+    title: "MSF Properties",
+    description: "Comprehensive real estate platform featuring property listings, advanced search functionality, virtual tours, and integrated property management tools specifically designed for the UAE market.",
+    technologies: ["WordPress", "Real Estate Plugin", "Custom Fields", "Property Search", "Maps Integration", "Virtual Tours"],
     imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973",
     category: "WordPress",
-    githubUrl: "https://github.com/AliIshaqPro",
+    liveUrl: "https://msfproperties.ae/",
   },
   {
-    title: "Healthcare Management System",
-    description: "A secure healthcare management system with appointment scheduling, patient records, billing integration, and HIPAA-compliant data storage.",
-    technologies: ["Ruby on Rails", "PostgreSQL", "Sidekiq", "AWS S3", "Stripe"],
-    imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070",
-    category: "Ruby on Rails",
-    githubUrl: "https://github.com/AliIshaqPro",
-  },
-  {
-    title: "Social Media Dashboard",
-    description: "A centralized dashboard for social media management, featuring content scheduling, analytics reporting, and multi-platform integration.",
-    technologies: ["React", "Node.js", "MongoDB", "Chart.js", "Various Social APIs"],
-    imageUrl: "https://images.unsplash.com/photo-1480694313141-fce5e697ee25?q=80&w=2070",
-    category: "MERN Stack",
-    githubUrl: "https://github.com/AliIshaqPro",
-  },
-  {
-    title: "Travel Blogging Platform",
-    description: "A feature-rich blogging platform specialized for travel bloggers with location tagging, photo galleries, and monetization tools.",
-    technologies: ["WordPress", "PHP", "Custom Post Types", "ACF Pro", "GeoLocation"],
-    imageUrl: "https://images.unsplash.com/photo-1500835556837-99ac94a94552?q=80&w=1974",
+    title: "Empyrian Media",
+    description: "Digital marketing agency website with portfolio showcase, service pages, client testimonials, and case studies. Modern design with advanced animations and performance optimization.",
+    technologies: ["WordPress", "Elementor Pro", "Custom Animations", "SEO Optimization", "Performance Tuning", "Analytics"],
+    imageUrl: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2074",
     category: "WordPress",
-    githubUrl: "https://github.com/AliIshaqPro",
+    liveUrl: "https://empyrianmedia.com/",
   },
   {
-    title: "Inventory Management System",
-    description: "A comprehensive inventory management system with barcode scanning, stock tracking, supplier management, and detailed reporting.",
-    technologies: ["Ruby on Rails", "PostgreSQL", "Hotwire", "Turbo", "Stimulus"],
-    imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070",
-    category: "Ruby on Rails",
-    githubUrl: "https://github.com/AliIshaqPro",
-  },
-  {
-    title: "Food Delivery App",
-    description: "A modern food delivery application with restaurant listings, real-time order tracking, payment processing, and delivery management.",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Socket.io", "Stripe"],
-    imageUrl: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?q=80&w=1922",
-    category: "MERN Stack",
-    githubUrl: "https://github.com/AliIshaqPro",
-  },
-  {
-    title: "Digital Magazine",
-    description: "A digital magazine platform with subscription management, content categorization, and interactive reading experience.",
-    technologies: ["WordPress", "PHP", "JavaScript", "WooCommerce", "Custom Fields"],
-    imageUrl: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070",
+    title: "GALILEO Protocol",
+    description: "Blockchain-based protocol website with sophisticated design, technical documentation, and integration with blockchain technologies. Features modern UI/UX and responsive design.",
+    technologies: ["WordPress", "Blockchain Integration", "Custom Design", "Technical Documentation", "Responsive Design"],
+    imageUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2070",
     category: "WordPress",
-    githubUrl: "https://github.com/AliIshaqPro",
+    liveUrl: "https://galileoprotocol.io/",
   },
   {
-    title: "Project Management Tool",
-    description: "A comprehensive project management tool with task tracking, team collaboration, file sharing, and reporting features.",
-    technologies: ["Ruby on Rails", "PostgreSQL", "Action Cable", "Stimulus", "AWS S3"],
-    imageUrl: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2072",
-    category: "Ruby on Rails",
-    githubUrl: "https://github.com/AliIshaqPro",
-  },
-  {
-    title: "Real-time Chat Application",
-    description: "A secure real-time chat application with private messaging, group chats, file sharing, and message encryption.",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
-    imageUrl: "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?q=80&w=2070",
-    category: "MERN Stack",
-    githubUrl: "https://github.com/AliIshaqPro",
-  },
-  {
-    title: "Online Learning Platform",
-    description: "A comprehensive online learning platform with course management, student progress tracking, and interactive learning materials.",
-    technologies: ["WordPress", "LearnDash", "PHP", "JavaScript", "WooCommerce"],
-    imageUrl: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=2074",
+    title: "B9 Energy",
+    description: "Energy sector website showcasing renewable energy solutions, company services, and project portfolios. Features clean design with focus on sustainability and environmental impact.",
+    technologies: ["WordPress", "Custom Theme", "Portfolio Management", "Service Showcase", "Environmental Design"],
+    imageUrl: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=2070",
     category: "WordPress",
-    githubUrl: "https://github.com/AliIshaqPro",
+    liveUrl: "https://b9energy.co.uk/",
   },
   {
-    title: "Event Management System",
-    description: "A complete event management system with ticket sales, attendee management, scheduling, and event analytics.",
-    technologies: ["Ruby on Rails", "PostgreSQL", "Stripe", "Hotwire", "Action Mailer"],
-    imageUrl: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2012",
-    category: "Ruby on Rails",
-    githubUrl: "https://github.com/AliIshaqPro",
+    title: "Sodoma Law",
+    description: "Professional law firm website with practice area showcase, attorney profiles, case studies, and client portal. Features sophisticated design with emphasis on trust and professionalism.",
+    technologies: ["WordPress", "Legal Theme", "Attorney Profiles", "Case Studies", "Client Portal", "Professional Design"],
+    imageUrl: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070",
+    category: "WordPress",
+    liveUrl: "https://www.sodomalaw.com/",
   },
   {
-    title: "Financial Dashboard",
-    description: "A comprehensive financial dashboard with expense tracking, budget management, financial forecasting, and data visualization.",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "D3.js", "Chart.js"],
-    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015",
-    category: "MERN Stack",
-    githubUrl: "https://github.com/AliIshaqPro",
+    title: "QNQ Builders",
+    description: "Construction company website featuring project galleries, service offerings, team profiles, and client testimonials. Emphasis on showcasing construction expertise and completed projects.",
+    technologies: ["WordPress", "Construction Theme", "Project Gallery", "Team Profiles", "Testimonials", "Service Pages"],
+    imageUrl: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070",
+    category: "WordPress",
+    liveUrl: "https://qnqbuilders.co.uk/",
+  },
+  {
+    title: "Mattis Auto Detailing",
+    description: "Automotive detailing service website with service packages, before/after galleries, booking system, and customer reviews. Features modern design optimized for mobile users.",
+    technologies: ["WordPress", "Automotive Theme", "Booking System", "Gallery Management", "Mobile Optimization", "Review System"],
+    imageUrl: "https://images.unsplash.com/photo-1632294635264-db2814d3cd60?q=80&w=2070",
+    category: "WordPress",
+    liveUrl: "https://mattisautodetailing-com.us.stackstaging.com/",
+  },
+  {
+    title: "Fancy Moissanite",
+    description: "E-commerce jewelry website featuring moissanite products with WooCommerce integration, payment gateways, product customization, and advanced search functionality.",
+    technologies: ["WordPress", "WooCommerce", "E-commerce", "Payment Integration", "Product Customization", "Search Filters"],
+    imageUrl: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=2070",
+    category: "WordPress",
+    liveUrl: "https://fancymoissanite.com/",
+  },
+  {
+    title: "North Carolina Attorney",
+    description: "Legal services website for Hartsell & Williams featuring attorney profiles, practice areas, legal resources, and client consultation booking. Professional design with local SEO optimization.",
+    technologies: ["WordPress", "Legal Framework", "Attorney Directory", "Consultation Booking", "Legal Resources", "Local SEO"],
+    imageUrl: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070",
+    category: "WordPress",
+    liveUrl: "https://yourncattorney.com/",
+  },
+  {
+    title: "Agency Angle / Clear Lines",
+    description: "Creative agency website showcasing design services, portfolio projects, and client success stories. Features modern animations and interactive elements for enhanced user experience.",
+    technologies: ["WordPress", "Creative Design", "Portfolio Showcase", "Animations", "Interactive Elements", "Client Stories"],
+    imageUrl: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2074",
+    category: "WordPress",
+    liveUrl: "https://empyrianmedia.com/",
+  },
+  {
+    title: "RPO.ai",
+    description: "AI-powered recruitment platform featuring advanced candidate matching, automated workflows, and data analytics. Modern tech design with emphasis on AI capabilities and user experience.",
+    technologies: ["WordPress", "AI Integration", "Data Analytics", "Automated Workflows", "Modern UI", "Tech Design"],
+    imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
+    category: "WordPress",
+    liveUrl: "https://rpo.ai/",
   },
 ];
 
 const Projects = () => {
   const [filter, setFilter] = useState("All");
-  const categories = ["All", "WordPress", "Ruby on Rails", "MERN Stack"];
+  const categories = ["All", "WordPress"];
 
   const filteredProjects = filter === "All" 
     ? projects 
@@ -144,14 +119,32 @@ const Projects = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">My <span className="text-gradient">Projects</span></h1>
             <p className="text-gray-400">
-              Explore my portfolio of web development projects, showcasing my expertise in WordPress, 
-              Ruby on Rails, and MERN stack development.
+              Explore my portfolio of WordPress development projects, showcasing custom themes, 
+              WooCommerce solutions, and comprehensive web applications for diverse industries.
             </p>
           </div>
         </AnimatedSection>
 
-        {/* Filter Buttons */}
+        {/* Stats */}
         <AnimatedSection delay={0.1}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div className="glass-panel p-6 rounded-xl text-center">
+              <div className="text-3xl font-bold text-neon-blue mb-2">12+</div>
+              <div className="text-gray-400">Completed Projects</div>
+            </div>
+            <div className="glass-panel p-6 rounded-xl text-center">
+              <div className="text-3xl font-bold text-neon-purple mb-2">2.5+</div>
+              <div className="text-gray-400">Years Experience</div>
+            </div>
+            <div className="glass-panel p-6 rounded-xl text-center">
+              <div className="text-3xl font-bold text-neon-pink mb-2">100%</div>
+              <div className="text-gray-400">Client Satisfaction</div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Filter Buttons */}
+        <AnimatedSection delay={0.2}>
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {categories.map((category) => (
               <button
@@ -186,12 +179,21 @@ const Projects = () => {
           </AnimatePresence>
         </div>
 
-        {/* No Projects Message */}
-        {filteredProjects.length === 0 && (
-          <div className="text-center py-16">
-            <p className="text-gray-400 text-lg">No projects found in this category.</p>
+        {/* Call to Action */}
+        <AnimatedSection delay={0.3} className="mt-16">
+          <div className="glass-panel p-8 rounded-xl text-center">
+            <h2 className="text-2xl font-bold mb-4">Have a Project in Mind?</h2>
+            <p className="text-gray-400 mb-6">
+              I'm currently available for freelance WordPress projects and would love to discuss your ideas.
+            </p>
+            <a
+              href="/contact"
+              className="neo-button inline-flex items-center"
+            >
+              Let's Work Together
+            </a>
           </div>
-        )}
+        </AnimatedSection>
       </section>
     </main>
   );
