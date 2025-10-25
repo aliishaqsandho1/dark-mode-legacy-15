@@ -6,6 +6,7 @@ import { ArrowRight, Code, BriefcaseBusiness, Layers, Github, Linkedin, Calendar
 import AnimatedSection from "@/components/AnimatedSection";
 import ProjectCard from "@/components/ProjectCard";
 import SocialLinks from "@/components/SocialLinks";
+import profileImage from "@/assets/ali-ishaq-profile.jpg";
 
 const projects = [
   {
@@ -36,22 +37,22 @@ const projects = [
 
 const experienceData = [
   {
-    period: "May 2024 - Present",
-    title: "Lead WordPress Developer",
-    company: "Cortechsols",
-    description: "Led a team of 5 developers to deliver 10+ custom WordPress projects for global clients. Implemented Agile development workflows, improving delivery efficiency by 30%. Developed advanced custom plugins integrating third-party APIs and custom dashboards.",
-  },
-  {
-    period: "Feb 2023 - Apr 2024",
-    title: "WordPress Developer",
-    company: "Kodoverse (Remote)",
-    description: "Built and optimized multi-vendor WooCommerce marketplaces using Dokan Pro and custom plugin logic. Integrated blockchain and NFT functionality into WordPress eCommerce. Developed React frontends communicating with WordPress backends via REST APIs.",
-  },
-  {
-    period: "2020 - 2023",
+    period: "April 2025 - Present",
     title: "WordPress Developer",
     company: "Iplex",
-    description: "Developed 5+ responsive WordPress websites with custom CMS and optimized SEO. Resolved 50+ complex WordPress issues, improving site speed, stability, and UX. Maintained production servers and managed version control using GitHub.",
+    description: "Developed 5+ responsive WordPress websites with custom CMS solutions, ensuring seamless content management and enhanced SEO performance. Diagnosed and resolved 50+ WordPress bugs, improving site speed, security, and overall user experience.",
+  },
+  {
+    period: "May 2024 - April 2025",
+    title: "Lead WordPress Developer",
+    company: "Cortechsols",
+    description: "Developed and delivered 10+ custom WordPress themes for diverse clients, improving UI/UX and boosting performance. Led and mentored a team of 5 developers, implementing Agile practices that increased overall project efficiency and collaboration.",
+  },
+  {
+    period: "February 2023 - April 2024",
+    title: "WordPress Developer",
+    company: "Kodoverse",
+    description: "Developed multiple WordPress websites using custom themes and builders such as Elementor and Divi. Enhanced WooCommerce stores with Dokan Pro and Blockchain integrations, improving multivendor marketplace functionality. Optimized website performance and SEO, improving multivendor marketplace functionality in faster load times and improved search engine rankings.",
   },
 ];
 
@@ -88,11 +89,8 @@ const Index = () => {
                   Senior WordPress Developer <br />
                   Full Stack Web Engineer
                 </h1>
-                <p className="text-gray-400 text-lg mb-8 max-w-lg">
-                  Results-driven Senior WordPress Developer with 5+ years of experience delivering high-performance, scalable WordPress & WooCommerce solutions. Expert in custom plugin/theme development and React integration.
-                </p>
                 
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4 mb-8">
                   <Link
                     to="/projects"
                     className="neo-button flex items-center"
@@ -109,7 +107,7 @@ const Index = () => {
                   </button>
                 </div>
                 
-                <div className="mt-12">
+                <div className="mt-8">
                   <p className="text-gray-500 mb-4">Find me on</p>
                   <SocialLinks />
                 </div>
@@ -120,25 +118,32 @@ const Index = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
+              className="relative flex items-center justify-center"
             >
-              
-              
-              <div className="absolute -bottom-5 -right-5 p-4 glass-panel rounded-lg backdrop-blur-xl w-48">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
-                  <p className="text-white text-sm font-medium">Available for work</p>
-                </div>
-              </div>
-              
-              <div className="absolute -top-5 -left-5 p-4 glass-panel rounded-lg backdrop-blur-xl">
-                <div className="flex items-center space-x-3">
-                  <div className="bg-neon-blue/20 w-10 h-10 rounded-full flex items-center justify-center text-neon-blue">
-                    <Calendar size={20} />
+              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+                <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 rounded-full blur-3xl"></div>
+                <img 
+                  src={profileImage} 
+                  alt="Ali Ishaq - Senior WordPress Developer"
+                  className="relative w-full h-full object-cover rounded-full border-4 border-white/10"
+                />
+                
+                <div className="absolute -bottom-5 -right-5 p-4 glass-panel rounded-lg backdrop-blur-xl w-48 z-10">
+                  <div className="flex items-center">
+                    <div className="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                    <p className="text-white text-sm font-medium">Available for work</p>
                   </div>
-                  <div>
-                            <p className="text-gray-400 text-xs">Experience</p>
-                            <p className="text-white font-medium">5+ Years</p>
+                </div>
+                
+                <div className="absolute -top-5 -left-5 p-4 glass-panel rounded-lg backdrop-blur-xl z-10">
+                  <div className="flex items-center space-x-3">
+                    <div className="bg-neon-blue/20 w-10 h-10 rounded-full flex items-center justify-center text-neon-blue">
+                      <Calendar size={20} />
+                    </div>
+                    <div>
+                      <p className="text-gray-400 text-xs">Experience</p>
+                      <p className="text-white font-medium">5+ Years</p>
+                    </div>
                   </div>
                 </div>
               </div>
