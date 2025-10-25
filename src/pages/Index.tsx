@@ -36,22 +36,22 @@ const projects = [
 
 const experienceData = [
   {
-    period: "April 2025 - Present",
+    period: "May 2024 - Present",
     title: "Lead WordPress Developer",
     company: "Cortechsols",
-    description: "Leading a team of 5 developers, engineered 10+ custom WordPress themes, and integrated third-party APIs for seamless WooCommerce transactions.",
+    description: "Led a team of 5 developers to deliver 10+ custom WordPress projects for global clients. Implemented Agile development workflows, improving delivery efficiency by 30%. Developed advanced custom plugins integrating third-party APIs and custom dashboards.",
   },
   {
-    period: "February 2024 - April 2025",
+    period: "Feb 2023 - Apr 2024",
     title: "WordPress Developer",
     company: "Kodoverse (Remote)",
-    description: "Optimized WooCommerce stores using Dokan Pro and Blockchain, built custom WordPress themes & plugins, increasing user engagement by 20%.",
+    description: "Built and optimized multi-vendor WooCommerce marketplaces using Dokan Pro and custom plugin logic. Integrated blockchain and NFT functionality into WordPress eCommerce. Developed React frontends communicating with WordPress backends via REST APIs.",
   },
   {
-    period: "September 2020 - April 2024",
+    period: "2020 - 2023",
     title: "WordPress Developer",
     company: "Iplex",
-    description: "Developed 5+ responsive WordPress websites with custom CMS solutions and diagnosed/resolved 50+ WordPress bugs improving site performance.",
+    description: "Developed 5+ responsive WordPress websites with custom CMS and optimized SEO. Resolved 50+ complex WordPress issues, improving site speed, stability, and UX. Maintained production servers and managed version control using GitHub.",
   },
 ];
 
@@ -85,12 +85,11 @@ const Index = () => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                   Hi, I'm <span className="text-gradient">Ali Ishaq</span>
                   <br /> 
-                  WordPress Developer <br />
-                  & Web Specialist
+                  Senior WordPress Developer <br />
+                  Full Stack Web Engineer
                 </h1>
                 <p className="text-gray-400 text-lg mb-8 max-w-lg">
-                  Results-driven WordPress Developer with over 2.5 years of experience. 
-                  Specialized in custom themes, plugins, and WooCommerce solutions.
+                  Results-driven Senior WordPress Developer with 5+ years of experience delivering high-performance, scalable WordPress & WooCommerce solutions. Expert in custom plugin/theme development and React integration.
                 </p>
                 
                 <div className="flex flex-wrap gap-4">
@@ -139,7 +138,7 @@ const Index = () => {
                   </div>
                   <div>
                             <p className="text-gray-400 text-xs">Experience</p>
-                            <p className="text-white font-medium">2.5+ Years</p>
+                            <p className="text-white font-medium">5+ Years</p>
                   </div>
                 </div>
               </div>

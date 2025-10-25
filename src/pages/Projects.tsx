@@ -153,16 +153,16 @@ const Projects = () => {
         <AnimatedSection delay={0.1}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             <div className="glass-panel p-6 rounded-xl text-center">
-              <div className="text-3xl font-bold text-neon-blue mb-2">12+</div>
-              <div className="text-gray-400">Completed Projects</div>
+              <div className="text-3xl font-bold text-neon-blue mb-2">100+</div>
+              <div className="text-gray-400">Websites Managed</div>
             </div>
             <div className="glass-panel p-6 rounded-xl text-center">
-              <div className="text-3xl font-bold text-neon-purple mb-2">2.5+</div>
+              <div className="text-3xl font-bold text-neon-purple mb-2">5+</div>
               <div className="text-gray-400">Years Experience</div>
             </div>
             <div className="glass-panel p-6 rounded-xl text-center">
-              <div className="text-3xl font-bold text-neon-pink mb-2">100%</div>
-              <div className="text-gray-400">Client Satisfaction</div>
+              <div className="text-3xl font-bold text-neon-pink mb-2">40%</div>
+              <div className="text-gray-400">Performance Improvement</div>
             </div>
           </div>
         </AnimatedSection>
