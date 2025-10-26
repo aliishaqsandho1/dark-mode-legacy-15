@@ -8,6 +8,7 @@ import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
@@ -48,6 +49,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Navbar />
+        <WhatsAppButton />
         <AnimatedRoutes />
         <Footer />
       </BrowserRouter>

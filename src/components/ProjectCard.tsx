@@ -36,7 +36,7 @@ const ProjectCard = ({
 
   return (
     <motion.div 
-      className="bg-dark-300/80 rounded-xl overflow-hidden card-hover border border-white/10"
+      className="bg-dark-300/80 rounded-xl overflow-hidden card-hover border border-white/10 flex flex-col h-full"
       whileHover={{ y: -5 }}
     >
       <div className="relative overflow-hidden group aspect-video h-48">
@@ -87,9 +87,9 @@ const ProjectCard = ({
         </div>
       </div>
       
-      <div className="p-5">
+      <div className="p-5 flex flex-col flex-1">
         <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-        <p className="text-gray-400 text-sm mb-4">
+        <p className="text-gray-400 text-sm mb-4 flex-1">
           {expanded ? description : `${description.substring(0, 100)}${description.length > 100 ? '...' : ''}`}
         </p>
         
@@ -112,7 +112,7 @@ const ProjectCard = ({
           </button>
         )}
         
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mt-auto">
           {technologies.map((tech) => (
             <span 
               key={tech} 

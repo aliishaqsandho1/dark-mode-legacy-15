@@ -8,16 +8,39 @@ import ProjectCard from "@/components/ProjectCard";
 import SocialLinks from "@/components/SocialLinks";
 import profileImage from "@/assets/ali-ishaq-hero.jpg";
 
+// Top featured projects - showing most recent/important work
 const projects = [
   {
+    id: "usman-hardware",
+    title: "Usman Hardware Inventory Management System",
+    description: "Complete inventory management system with React frontend and WordPress backend. Features real-time stock tracking, order management, and comprehensive reporting dashboard.",
+    technologies: ["React", "WordPress", "REST API", "Inventory Management", "Real-time Updates", "Dashboard"],
+    imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070",
+    category: "React, WordPress",
+    liveUrl: "https://zaidawn.site/",
+    githubUrl: "https://github.com",
+  },
+  {
+    id: "iq-ceilings",
+    title: "IQ Ceilings",
+    description: "Modern false ceilings company website with React frontend and WordPress backend. Showcases ceiling designs, project gallery, and service offerings with elegant UI.",
+    technologies: ["React", "WordPress", "Gallery", "Portfolio", "Modern UI", "Responsive Design"],
+    imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053",
+    category: "React, WordPress",
+    liveUrl: "https://iqfalseceilings.site/",
+    githubUrl: "https://github.com",
+  },
+  {
+    id: "dekosmetiskelaeger",
     title: "Dekosmetiskelæger.dk",
     description: "Professional cosmetic clinic website with appointment booking system, treatment showcase, and multilingual support for Danish medical practice.",
     technologies: ["WordPress", "PHP", "Custom Themes", "Booking System", "Multilingual"],
-    imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=2070",
+    imageUrl: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053",
     category: "WordPress",
     liveUrl: "https://www.dekosmetiskelaeger.dk/",
   },
   {
+    id: "msf-properties",
     title: "MSF Properties",
     description: "Real estate platform featuring property listings, advanced search functionality, and integrated property management tools for UAE market.",
     technologies: ["WordPress", "Real Estate Plugin", "Custom Fields", "Property Search", "Maps Integration"],
@@ -26,12 +49,22 @@ const projects = [
     liveUrl: "https://msfproperties.ae/",
   },
   {
-    title: "Empyrian Media",
-    description: "Digital marketing agency website with portfolio showcase, service pages, and client testimonials. Modern design with performance optimization.",
-    technologies: ["WordPress", "Elementor Pro", "Custom Animations", "SEO Optimization", "Performance Tuning"],
+    id: "galileo-protocol",
+    title: "GALILEO Protocol",
+    description: "Blockchain-based protocol website with sophisticated design, technical documentation, and integration with blockchain technologies.",
+    technologies: ["WordPress", "Blockchain Integration", "Custom Design", "Technical Documentation", "Responsive Design"],
+    imageUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2032",
+    category: "WordPress",
+    liveUrl: "https://galileoprotocol.io/",
+  },
+  {
+    id: "agency-angle",
+    title: "Agency Angle",
+    description: "Creative agency website showcasing design services, portfolio projects, and client success stories.",
+    technologies: ["WordPress", "Creative Design", "Portfolio Showcase", "Animations", "Interactive Elements"],
     imageUrl: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2074",
     category: "WordPress",
-    liveUrl: "https://empyrianmedia.com/",
+    liveUrl: "https://www.agencyangle.com/",
   },
 ];
 

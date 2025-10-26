@@ -11,18 +11,9 @@ const projects = [
     description: "Complete inventory management system with React frontend and WordPress backend. Features real-time stock tracking, order management, and comprehensive reporting dashboard.",
     technologies: ["React", "WordPress", "REST API", "Inventory Management", "Real-time Updates", "Dashboard"],
     imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070",
-    category: "React",
+    category: "React, WordPress",
     liveUrl: "https://zaidawn.site/",
     githubUrl: "https://github.com",
-  },
-  {
-    id: "usman-hardware-wordpress",
-    title: "Usman Hardware Inventory Management System",
-    description: "Complete inventory management system with React frontend and WordPress backend. Features real-time stock tracking, order management, and comprehensive reporting dashboard.",
-    technologies: ["React", "WordPress", "REST API", "Inventory Management", "Real-time Updates", "Dashboard"],
-    imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070",
-    category: "WordPress",
-    liveUrl: "https://zaidawn.site/",
   },
   {
     id: "iq-ceilings",
@@ -247,10 +238,12 @@ const projects = [
 const Projects = () => {
   const [filter, setFilter] = useState("All");
   const categories = ["All", "React", "WordPress"];
-
-  const filteredProjects = filter === "All" 
-    ? projects 
-    : projects.filter(project => project.category === filter);
+  
+  // Filter projects based on category
+  const filteredProjects = projects.filter(project => {
+    if (filter === "All") return true;
+    return project.category.includes(filter);
+  });
 
   return (
     <main className="pt-24 pb-16">
