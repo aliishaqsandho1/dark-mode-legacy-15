@@ -13,7 +13,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold text-gradient mb-4">Ali Ishaq</h3>
             <p className="text-gray-400 mb-6 max-w-sm">
-              Senior Developer specializing in WordPress, Ruby on Rails, and MERN stack with 1.5+ years of extensive experience.
+              Senior Developer specializing in WordPress, Ruby on Rails, and MERN stack with 3+ years of extensive experience.
             </p>
             <SocialLinks />
           </div>

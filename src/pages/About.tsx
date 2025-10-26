@@ -40,7 +40,7 @@ const About = () => {
                   </div>
                   <div>
                     <p className="text-gray-400 text-xs">Experience</p>
-                    <p className="text-white font-medium">5+ Years</p>
+                    <p className="text-white font-medium">3+ Years</p>
                   </div>
                 </div>
               </div>
@@ -63,7 +63,7 @@ const About = () => {
             <div className="glass-panel p-8 rounded-xl h-full">
               <h2 className="text-2xl font-bold mb-6">Who I Am</h2>
               <p className="text-gray-400 mb-6">
-                I'm Ali Ishaq, a Senior WordPress Developer and Full Stack Web Engineer with 5+ years of extensive experience delivering high-performance, scalable, and secure WordPress & WooCommerce solutions. 
+                I'm Ali Ishaq, a Senior WordPress Developer and Full Stack Web Engineer with 3+ years of extensive experience delivering high-performance, scalable, and secure WordPress & WooCommerce solutions. 
                 My expertise spans custom plugin/theme development, REST API integration, blockchain-based eCommerce, and React front-end integration.
               </p>
               <p className="text-gray-400 mb-6">

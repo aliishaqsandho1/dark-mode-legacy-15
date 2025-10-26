@@ -49,7 +49,7 @@ const ProfileImage = ({ imageUrl, alt }: ProfileImageProps) => {
           </div>
           <div>
             <p className="text-gray-400 text-xs">Experience</p>
-            <p className="text-white font-medium">1.5+ Years</p>
+            <p className="text-white font-medium">3+ Years</p>
           </div>
         </div>
       </div>

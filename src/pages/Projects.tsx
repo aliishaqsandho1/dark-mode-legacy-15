@@ -157,7 +157,7 @@ const Projects = () => {
               <div className="text-gray-400">Websites Managed</div>
             </div>
             <div className="glass-panel p-6 rounded-xl text-center">
-              <div className="text-3xl font-bold text-neon-purple mb-2">5+</div>
+              <div className="text-3xl font-bold text-neon-purple mb-2">3+</div>
               <div className="text-gray-400">Years Experience</div>
             </div>
             <div className="glass-panel p-6 rounded-xl text-center">
