@@ -77,7 +77,6 @@ const projects = [
     technologies: ["React", "Framer Motion", "Tailwind CSS", "Responsive Design", "Animations", "Modern UI"],
     imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015",
     category: "React",
-    liveUrl: "https://itsali.site/",
     features: [
       "Smooth scroll animations",
       "Interactive project showcases",
@@ -621,7 +620,6 @@ const projects = [
     technologies: ["WordPress", "Product Catalog", "Color Gallery", "Service Pages", "Visual Design", "E-commerce"],
     imageUrl: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=2074",
     category: "WordPress",
-    liveUrl: "https://brightplus.site/",
     features: [
       "Interactive color palette",
       "Product catalog",
@@ -781,7 +779,6 @@ const projects = [
     technologies: ["WordPress", "WooCommerce", "Fashion E-commerce", "Product Gallery", "Luxury Design", "Payment Integration"],
     imageUrl: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=2069",
     category: "WordPress",
-    liveUrl: "https://bagelegance.site/",
     features: [
       "Luxury product galleries",
       "Material and care information",

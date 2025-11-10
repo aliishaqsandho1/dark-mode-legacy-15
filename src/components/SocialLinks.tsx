@@ -25,9 +25,10 @@ const SocialLink = ({ href, icon, label, className = "" }: SocialLinkProps) => (
 
 interface SocialLinksProps {
   className?: string;
+  showEmailAndWebsite?: boolean;
 }
 
-const SocialLinks = ({ className = "" }: SocialLinksProps) => (
+const SocialLinks = ({ className = "", showEmailAndWebsite = true }: SocialLinksProps) => (
   <div className={`flex items-center space-x-3 ${className}`}>
     <SocialLink
       href="https://github.com/AliIshaqPro"
@@ -40,30 +41,34 @@ const SocialLinks = ({ className = "" }: SocialLinksProps) => (
       label="LinkedIn"
     />
     <SocialLink
-      href="https://sample-instagram.com/"
+      href="https://www.instagram.com/itsaliishaq/"
       icon={<Instagram size={18} />}
       label="Instagram"
     />
     <SocialLink
-      href="https://sample-facebook.com/"
+      href="https://www.facebook.com/profile.php?id=61553670333930"
       icon={<Facebook size={18} />}
       label="Facebook"
     />
-    <SocialLink
-      href="mailto:aliishaqsandho@gmail.com"
-      icon={<Mail size={18} />}
-      label="Email"
-    />
-    <SocialLink
-      href="tel:+923460422988"
-      icon={<PhoneCall size={18} />}
-      label="Phone"
-    />
-    <SocialLink
-      href="https://aliishaq.site"
-      icon={<Globe size={18} />}
-      label="Website"
-    />
+    {showEmailAndWebsite && (
+      <>
+        <SocialLink
+          href="mailto:aliishaqsandho@gmail.com"
+          icon={<Mail size={18} />}
+          label="Email"
+        />
+        <SocialLink
+          href="tel:+923460422988"
+          icon={<PhoneCall size={18} />}
+          label="Phone"
+        />
+        <SocialLink
+          href="https://aliishaq.site"
+          icon={<Globe size={18} />}
+          label="Website"
+        />
+      </>
+    )}
   </div>
 );
 

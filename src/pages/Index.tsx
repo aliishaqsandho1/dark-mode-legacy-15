@@ -142,7 +142,7 @@ const Index = () => {
                 
                 <div className="mt-8">
                   <p className="text-gray-500 mb-4">Find me on</p>
-                  <SocialLinks />
+                  <SocialLinks showEmailAndWebsite={false} />
                 </div>
               </motion.div>
             </div>

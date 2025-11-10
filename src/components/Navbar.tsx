@@ -100,25 +100,42 @@ const Navbar = () => {
               </motion.div>
             ))}
 
-            {/* WhatsApp Button in Header */}
-            <motion.a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-4 relative group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="absolute inset-0 bg-green-500 rounded-full blur-md opacity-50 group-hover:opacity-100 transition-opacity" />
-              <div className="relative bg-gradient-to-br from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 px-4 py-2 rounded-full flex items-center gap-2 shadow-lg transition-all duration-300">
-                <img 
-                  src="http://itsali.site/wp-content/uploads/2025/11/whatsapp.png" 
-                  alt="WhatsApp" 
-                  className="w-5 h-5"
-                />
-                <span className="text-white font-medium text-sm">Chat</span>
-              </div>
-            </motion.a>
+            {/* CV Download & WhatsApp Buttons */}
+            <div className="flex items-center gap-3">
+              <motion.a
+                href="http://itsali.site/wp-content/uploads/2025/11/ALI-ISHAQ-CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                download
+              >
+                <div className="absolute inset-0 bg-neon-blue rounded-full blur-md opacity-50 group-hover:opacity-100 transition-opacity" />
+                <div className="relative bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 hover:from-neon-blue/30 hover:to-neon-purple/30 border border-neon-blue/30 px-4 py-2 rounded-full flex items-center gap-2 shadow-lg transition-all duration-300">
+                  <span className="text-white font-medium text-sm">CV</span>
+                </div>
+              </motion.a>
+
+              <motion.a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <div className="absolute inset-0 bg-green-500 rounded-full blur-md opacity-50 group-hover:opacity-100 transition-opacity" />
+                <div className="relative bg-gradient-to-br from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 px-4 py-2 rounded-full flex items-center gap-2 shadow-lg transition-all duration-300">
+                  <img 
+                    src="http://itsali.site/wp-content/uploads/2025/11/whatsapp.png" 
+                    alt="WhatsApp" 
+                    className="w-5 h-5"
+                  />
+                  <span className="text-white font-medium text-sm">Chat</span>
+                </div>
+              </motion.a>
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -172,12 +189,26 @@ const Navbar = () => {
                 </motion.div>
               ))}
               
+              {/* Mobile CV Download Button */}
+              <motion.a
+                href="http://itsali.site/wp-content/uploads/2025/11/ALI-ISHAQ-CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 border border-neon-blue/30 text-white px-4 py-3 rounded-lg flex items-center justify-center gap-2 shadow-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                download
+              >
+                <span className="font-medium">Download CV</span>
+              </motion.a>
+
               {/* Mobile WhatsApp Button */}
               <motion.a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 bg-gradient-to-br from-green-400 to-green-600 text-white px-4 py-3 rounded-lg flex items-center justify-center gap-2 shadow-lg"
+                className="mt-2 bg-gradient-to-br from-green-400 to-green-600 text-white px-4 py-3 rounded-lg flex items-center justify-center gap-2 shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}

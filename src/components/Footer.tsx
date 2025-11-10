@@ -16,6 +16,15 @@ const Footer = () => {
               Senior Developer specializing in WordPress, Ruby on Rails, and MERN stack with 3+ years of extensive experience.
             </p>
             <SocialLinks />
+            <a
+              href="http://itsali.site/wp-content/uploads/2025/11/ALI-ISHAQ-CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 border border-neon-blue/30 text-white px-4 py-2 rounded-lg hover:from-neon-blue/30 hover:to-neon-purple/30 transition-all duration-300"
+              download
+            >
+              <span className="text-sm font-medium">Download CV</span>
+            </a>
           </div>
           
           <div>
