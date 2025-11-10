@@ -13,9 +13,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold text-gradient mb-4">Ali Ishaq</h3>
             <p className="text-gray-400 mb-6 max-w-sm">
-              Senior Developer specializing in WordPress, Ruby on Rails, and MERN stack with 3+ years of extensive experience.
+              Senior Developer specializing in WordPress and MERN stack with 3+ years of extensive experience.
             </p>
-            <SocialLinks />
+            <SocialLinks showEmailAndWebsite={false} />
             <a
               href="http://itsali.site/wp-content/uploads/2025/11/ALI-ISHAQ-CV.pdf"
               target="_blank"
@@ -64,16 +64,6 @@ const Footer = () => {
                   className="hover:text-neon-blue transition-colors duration-300"
                 >
                   +92 346 0422988
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="https://aliishaq.site"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-neon-blue transition-colors duration-300"
-                >
-                  aliishaq.site
                 </a>
               </li>
             </ul>
