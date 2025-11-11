@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import CVButton from "./components/CVButton";
 import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
@@ -50,6 +51,7 @@ const App = () => (
       <BrowserRouter>
         <Navbar />
         <WhatsAppButton />
+        <CVButton />
         <AnimatedRoutes />
         <Footer />
       </BrowserRouter>

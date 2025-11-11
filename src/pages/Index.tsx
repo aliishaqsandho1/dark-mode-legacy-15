@@ -99,34 +99,34 @@ const Index = () => {
   return (
     <main className="pt-16">
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center relative overflow-hidden">
+      <section className="min-h-[90vh] flex items-center relative overflow-hidden px-4 sm:px-6">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-2/3 h-2/3 bg-neon-purple/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
           <div className="absolute bottom-0 left-0 w-2/3 h-2/3 bg-neon-blue/10 rounded-full blur-[120px] translate-y-1/3 -translate-x-1/4"></div>
         </div>
         
-        <div className="container-custom relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+        <div className="container-custom relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="px-2 sm:px-0">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="inline-block px-3 py-1 rounded-full bg-neon-blue/10 text-neon-blue text-sm font-medium mb-6">
+                <div className="inline-block px-3 py-1 rounded-full bg-neon-blue/10 text-neon-blue text-sm font-medium mb-4 sm:mb-6">
                   WordPress Developer
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
                   Hi, I'm <span className="text-gradient">Ali Ishaq</span>
                   <br /> 
                   Senior WordPress Developer <br />
                   Full Stack Web Engineer
                 </h1>
                 
-                <div className="flex flex-wrap gap-4 mb-8">
+                <div className="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8">
                   <Link
                     to="/projects"
-                    className="neo-button flex items-center"
+                    className="neo-button flex items-center text-sm sm:text-base"
                   >
                     <span>View My Work</span>
                     <ArrowRight size={18} className="ml-2" />
@@ -134,14 +134,14 @@ const Index = () => {
                   
                   <button
                     onClick={scrollToAbout}
-                    className="px-6 py-3 rounded-md border border-white/10 text-white font-medium hover:bg-white/5 transition-colors duration-300"
+                    className="px-4 sm:px-6 py-2 sm:py-3 rounded-md border border-white/10 text-white font-medium hover:bg-white/5 transition-colors duration-300 text-sm sm:text-base"
                   >
                     About Me
                   </button>
                 </div>
                 
-                <div className="mt-8">
-                  <p className="text-gray-500 mb-4">Find me on</p>
+                <div className="mt-6 sm:mt-8">
+                  <p className="text-gray-500 mb-3 sm:mb-4 text-sm sm:text-base">Find me on</p>
                   <SocialLinks showEmailAndWebsite={false} />
                 </div>
               </motion.div>
@@ -151,9 +151,9 @@ const Index = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative flex items-center justify-center"
+              className="relative flex items-center justify-center px-4 sm:px-0"
             >
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 rounded-full blur-3xl"></div>
                 <img 
                   src={profileImage} 
@@ -161,21 +161,21 @@ const Index = () => {
                   className="relative w-full h-full object-cover rounded-full border-4 border-white/10"
                 />
                 
-                <div className="absolute -bottom-5 -right-5 p-4 glass-panel rounded-lg backdrop-blur-xl w-48 z-10">
+                <div className="absolute -bottom-3 -right-3 sm:-bottom-5 sm:-right-5 p-3 sm:p-4 glass-panel rounded-lg backdrop-blur-xl w-40 sm:w-48 z-10">
                   <div className="flex items-center">
-                    <div className="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
-                    <p className="text-white text-sm font-medium">Available for work</p>
+                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500 mr-2"></div>
+                    <p className="text-white text-xs sm:text-sm font-medium">Available for work</p>
                   </div>
                 </div>
                 
-                <div className="absolute -top-5 -left-5 p-4 glass-panel rounded-lg backdrop-blur-xl z-10">
-                  <div className="flex items-center space-x-3">
-                    <div className="bg-neon-blue/20 w-10 h-10 rounded-full flex items-center justify-center text-neon-blue">
-                      <Calendar size={20} />
+                <div className="absolute -top-3 -left-3 sm:-top-5 sm:-left-5 p-3 sm:p-4 glass-panel rounded-lg backdrop-blur-xl z-10">
+                  <div className="flex items-center space-x-2 sm:space-x-3">
+                    <div className="bg-neon-blue/20 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-neon-blue">
+                      <Calendar size={16} className="sm:w-5 sm:h-5" />
                     </div>
                     <div>
-                      <p className="text-gray-400 text-xs">Experience</p>
-                      <p className="text-white font-medium">3+ Years</p>
+                      <p className="text-gray-400 text-[10px] sm:text-xs">Experience</p>
+                      <p className="text-white font-medium text-xs sm:text-sm">3+ Years</p>
                     </div>
                   </div>
                 </div>
@@ -210,16 +210,16 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section ref={aboutRef} className="section bg-dark-200/50 border-y border-white/5">
+      <section ref={aboutRef} className="section bg-dark-200/50 border-y border-white/5 px-4 sm:px-6">
         <div className="container-custom">
           <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">About <span className="text-gradient">Me</span></h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">Get to know me and my expertise in web development</p>
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">About <span className="text-gradient">Me</span></h2>
+              <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base px-4">Get to know me and my expertise in web development</p>
             </div>
           </AnimatedSection>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             <AnimatedSection delay={0.1} direction="up" className="glass-panel p-6 rounded-xl">
               <div className="bg-neon-blue/20 w-12 h-12 rounded-full flex items-center justify-center text-neon-blue mb-4">
                 <Code size={24} />
@@ -308,12 +308,12 @@ const Index = () => {
       </section>
 
       {/* Experience Section */}
-      <section className="section">
+      <section className="section px-4 sm:px-6">
         <div className="container-custom">
           <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Work <span className="text-gradient">Experience</span></h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">My professional journey as a developer</p>
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Work <span className="text-gradient">Experience</span></h2>
+              <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base px-4">My professional journey as a developer</p>
             </div>
           </AnimatedSection>
           
@@ -345,17 +345,17 @@ const Index = () => {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="section bg-dark-200/50 border-y border-white/5">
+      <section className="section bg-dark-200/50 border-y border-white/5 px-4 sm:px-6">
         <div className="container-custom">
           <AnimatedSection>
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured <span className="text-gradient">Projects</span></h2>
-                <p className="text-gray-400 max-w-2xl">A selection of my recent work</p>
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 sm:mb-16">
+              <div className="px-2 sm:px-0">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Featured <span className="text-gradient">Projects</span></h2>
+                <p className="text-gray-400 max-w-2xl text-sm sm:text-base">A selection of my recent work</p>
               </div>
               <Link
                 to="/projects"
-                className="mt-4 md:mt-0 neo-button flex items-center self-start"
+                className="mt-4 md:mt-0 neo-button flex items-center self-start text-sm sm:text-base"
               >
                 <span>View All Projects</span>
                 <ArrowRight size={18} className="ml-2" />
@@ -363,7 +363,7 @@ const Index = () => {
             </div>
           </AnimatedSection>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {projects.map((project, index) => (
               <AnimatedSection key={index} delay={0.1 * index}>
                 <ProjectCard {...project} />
@@ -374,46 +374,46 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="section">
+      <section className="section px-4 sm:px-6">
         <div className="container-custom">
           <AnimatedSection>
-            <div className="glass-panel p-8 md:p-12 rounded-2xl relative overflow-hidden">
+            <div className="glass-panel p-6 sm:p-8 md:p-12 rounded-2xl relative overflow-hidden">
               <div className="absolute inset-0 opacity-10">
                 <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-neon-blue blur-[80px]"></div>
                 <div className="absolute -bottom-24 -left-24 w-64 h-64 rounded-full bg-neon-purple blur-[80px]"></div>
               </div>
               
               <div className="relative z-10 text-center max-w-2xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to work together?</h2>
-                <p className="text-gray-400 mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Ready to work together?</h2>
+                <p className="text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base px-2">
                   I'm currently available for freelance projects and full-time positions. 
                   Let's create something amazing together!
                 </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
                   <Link
                     to="/contact"
-                    className="neo-button flex items-center"
+                    className="neo-button flex items-center text-sm sm:text-base"
                   >
                     <span>Get in Touch</span>
                     <ArrowRight size={18} className="ml-2" />
                   </Link>
                   
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-3 sm:space-x-4">
                     <a 
                       href="https://github.com/AliIshaqPro"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2.5 rounded-full bg-dark-400 border border-white/10 text-white hover:text-neon-blue transition-colors"
+                      className="p-2 sm:p-2.5 rounded-full bg-dark-400 border border-white/10 text-white hover:text-neon-blue transition-colors"
                     >
-                      <Github size={20} />
+                      <Github size={18} className="sm:w-5 sm:h-5" />
                     </a>
                     <a 
                       href="https://www.linkedin.com/in/ali-ishaq-sandhu/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2.5 rounded-full bg-dark-400 border border-white/10 text-white hover:text-neon-blue transition-colors"
+                      className="p-2 sm:p-2.5 rounded-full bg-dark-400 border border-white/10 text-white hover:text-neon-blue transition-colors"
                     >
-                      <Linkedin size={20} />
+                      <Linkedin size={18} className="sm:w-5 sm:h-5" />
                     </a>
                   </div>
                 </div>

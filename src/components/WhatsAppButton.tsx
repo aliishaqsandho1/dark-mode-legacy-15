@@ -33,15 +33,12 @@ const WhatsAppButton = () => {
         />
         
         {/* Main button */}
-        <div className="relative bg-gradient-to-br from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 transition-all duration-300">
-        <img 
-          src="http://itsali.site/wp-content/uploads/2025/11/whatsapp.png" 
-          alt="WhatsApp" 
-          className="w-6 h-6"
-        />
-          <span className="font-semibold text-sm whitespace-nowrap">
-            WhatsApp Me
-          </span>
+        <div className="relative bg-gradient-to-br from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300">
+          <img 
+            src="http://itsali.site/wp-content/uploads/2025/11/whatsapp.png" 
+            alt="WhatsApp" 
+            className="w-8 h-8"
+          />
         </div>
 
         {/* Hover tooltip */}
