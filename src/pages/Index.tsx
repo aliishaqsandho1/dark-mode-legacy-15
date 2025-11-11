@@ -6,7 +6,7 @@ import { ArrowRight, Code, BriefcaseBusiness, Layers, Github, Linkedin, Calendar
 import AnimatedSection from "@/components/AnimatedSection";
 import ProjectCard from "@/components/ProjectCard";
 import SocialLinks from "@/components/SocialLinks";
-import profileImage from "@/assets/ali-ishaq-hero.jpg";
+const profileImage = "http://itsali.site/wp-content/uploads/2025/11/DSC_0004-scaled-1.jpg";
 
 // Top featured projects - showing most recent/important work
 const projects = [

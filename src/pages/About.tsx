@@ -25,7 +25,7 @@ const About = () => {
             <div className="relative">
               <div className="rounded-xl overflow-hidden border border-white/10 shadow-2xl">
                 <ImageWithFallback 
-                  src="https://qnqbuilders.co.uk/wp-content/uploads/2025/03/DSC_0004-scaled.jpg" 
+                  src="http://itsali.site/wp-content/uploads/2025/11/DSC_0004-scaled-1.jpg" 
                   alt="Ali Ishaq - Developer" 
                   className="w-full object-cover"
                   fallbackSrc="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop"
