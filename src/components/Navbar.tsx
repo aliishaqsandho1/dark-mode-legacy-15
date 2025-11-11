@@ -33,7 +33,7 @@ const Navbar = () => {
     { name: "Contact", path: "/contact" },
   ];
 
-  const whatsappUrl = "https://wa.me/923164324014?text=Hello! I'd like to discuss a project with you.";
+  const whatsappUrl = "https://wa.me/923460422988?text=Hello! I'd like to discuss a project with you.";
 
   return (
     <header

@@ -75,40 +75,8 @@ const About = () => {
                 and my ability to deliver solutions that exceed client expectations while maintaining code quality and security standards.
               </p>
               
-              <div className="flex flex-wrap gap-4 mt-8">
-                <a 
-                  href="https://github.com/AliIshaqPro" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-dark-300 text-gray-300 hover:bg-dark-400 hover:text-white transition-colors"
-                >
-                  <Github size={16} />
-                  <span>GitHub</span>
-                </a>
-                <a 
-                  href="https://www.linkedin.com/in/ali-ishaq-sandhu/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-dark-300 text-gray-300 hover:bg-dark-400 hover:text-white transition-colors"
-                >
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M6 9H2V21H6V9Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <span>LinkedIn</span>
-                </a>
-                <a 
-                  href="https://www.upwork.com/freelancers/~01ea89981961c95a70?mp_source=share" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-dark-300 text-gray-300 hover:bg-dark-400 hover:text-white transition-colors"
-                >
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 7.5C17.3 7.5 16.7 7.7 16.2 8C15.3 6.5 14 5.7 12.5 5.7C9.5 5.7 7 8.5 7 12C7 15.5 9.5 18.3 12.5 18.3C14 18.3 15.3 17.5 16.2 16C16.7 16.4 17.3 16.5 18 16.5C19.7 16.5 21 15.2 21 13.5C21 11.8 19.7 10.5 18 10.5C17.8 10.5 17.5 10.5 17.3 10.6C17.4 11 17.5 11.5 17.5 12C17.5 14.2 16.2 16 14.5 16C12.8 16 11.5 14.2 11.5 12C11.5 9.8 12.8 8 14.5 8C15.4 8 16.2 8.5 16.7 9.4C17 8.3 17.4 7.7 18 7.5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <span>Upwork</span>
-                </a>
+              <div className="flex justify-center mt-8">
+                <SocialLinks showEmailAndWebsite={false} />
               </div>
             </div>
           </AnimatedSection>
